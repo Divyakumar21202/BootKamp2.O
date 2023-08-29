@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".LoginActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="@color/teal_200">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_to_cse"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:textSize="30sp"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="90dp"
+        app:cardBackgroundColor="#020C57"
+        android:layout_marginTop="150dp"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_id"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColorHint="#FFFFFF"
+                android:id="@+id/edt_txt_Log_id"
+                android:autofillHints="username"
+                android:inputType="number" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/Login_password"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:autofillHints="password"
+                android:inputType="numberPassword"
+                android:id="@+id/edt_txt_Log_password"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        app:cardCornerRadius="10dp">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:backgroundTint="@color/black"
+            android:textSize="30sp"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:layout_marginTop="1dp"
+            android:id="@+id/login_Log_btn"
+
+
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">BootKamp 2.O</string>
+    <string name="user_image">user_image</string>
+    <string name="register">Register</string>
+    <string name="enter_your_name">enter_your_name</string>
+    <string name="enter_your_id">enter_your_id</string>
+    <string name="about_yourself">about_yourself</string>
+    <string name="enter_password">enter_password</string>
+    <string name="select_image">select_image</string>
+    <string name="sign">sign</string>
+    <string name="already_register">already_register</string>
+    <string name="already_register_n_click_here_to_sign_in">Already Register ? \n Click Here To Sign-in</string>
+    <string name="password">Password</string>
+    <string name="about">About</string>
+    <string name="id">Id</string>
+    <string name="name">Name</string>
+    <string name="newRegister">Register</string>
+    <string name="img">img</string>
+    <string name="already_register_nclick_here_to_login">Already Register?\nClick here to Login</string>
+    <string name="enter_id">Enter Id</string>
+    <string name="Login_password">Enter Password</string>
+    <string name="welcome_to_cse">Welcome TO CSE</string>
+    <string name="login">Login</string>
+</resources>

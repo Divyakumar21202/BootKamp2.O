@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "663191551307",
+    "project_id": "bootkamp-2-o",
+    "storage_bucket": "bootkamp-2-o.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:663191551307:android:13e9cba936952b27d6fcce",
+        "android_client_info": {
+          "package_name": "com.example.bootkamp2o"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "663191551307-ovgk3oogrmgi7p4hdguvi78b3cfbjono.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9DxvZTqiaCzA6DQ3jq6_bX-oz-6wC1z4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "663191551307-ovgk3oogrmgi7p4hdguvi78b3cfbjono.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
