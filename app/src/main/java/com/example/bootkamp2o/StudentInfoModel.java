@@ -1,12 +1,24 @@
 package com.example.bootkamp2o;
 
 public class StudentInfoModel {
-    int imageview;
-    String id;
-    String name;
-    public StudentInfoModel(int imageview,String name,String id){
-        this.id=id;
-        this.name=name;
-        this.imageview=imageview;
+
+    String ID;
+    String NAME;
+
+    String ABOUT;
+
+    public String getID() {
+        return ID;
     }
+
+    public String getNAME() {
+        return NAME;
+    }
+
+    public String getABOUT() {
+        return ABOUT;
+    }
+
+
+
 }

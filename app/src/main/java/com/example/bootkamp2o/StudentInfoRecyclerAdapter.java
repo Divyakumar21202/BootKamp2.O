@@ -31,9 +31,10 @@ public class StudentInfoRecyclerAdapter extends RecyclerView.Adapter<StudentInfo
 
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
-        holder.imageView.setImageResource(arrayList.get(position).imageview);
-        holder.name.setText(arrayList.get(position).name);
-        holder.id.setText(arrayList.get(position).id);
+        StudentInfoModel studentInfoModel=arrayList.get(position);
+        holder.name.setText(studentInfoModel.getNAME());
+        holder.id.setText(studentInfoModel.getID());
+        holder.about.setText(studentInfoModel.getABOUT());
     }
 
     @Override
@@ -42,13 +43,14 @@ public class StudentInfoRecyclerAdapter extends RecyclerView.Adapter<StudentInfo
     }
 
     public class viewHolder extends RecyclerView.ViewHolder{
-        TextView name,id;
+        TextView name,id,about;
         ImageView imageView;
         public viewHolder(View itemView){
             super(itemView);
             name=itemView.findViewById(R.id.txt_layout_student_name);
             id=itemView.findViewById(R.id.txt_layout_student_id);
             imageView=itemView.findViewById(R.id.imgview_layout_student_image);
+            about=itemView.findViewById(R.id.txt_layout_student_about);
         }
 
     }
