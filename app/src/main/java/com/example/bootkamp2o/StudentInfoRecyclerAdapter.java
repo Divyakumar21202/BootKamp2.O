@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 import java.util.zip.Inflater;
 
@@ -35,6 +37,13 @@ public class StudentInfoRecyclerAdapter extends RecyclerView.Adapter<StudentInfo
         holder.name.setText(studentInfoModel.getNAME());
         holder.id.setText(studentInfoModel.getID());
         holder.about.setText(studentInfoModel.getABOUT());
+        Glide.with(holder.imageView.getContext())
+                .load(studentInfoModel.getImages())
+                .placeholder(R.drawable.img_1)
+                .circleCrop()
+                .error(R.drawable.img_2)
+                .into(holder.imageView);
+
     }
 
     @Override

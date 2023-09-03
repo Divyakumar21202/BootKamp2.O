@@ -21,4 +21,5 @@
     <string name="Login_password">Enter Password</string>
     <string name="welcome_to_cse">Welcome TO CSE</string>
     <string name="login">Login</string>
+    <string name="welcome_to_iiit">Welcome To IIIT</string>
 </resources>

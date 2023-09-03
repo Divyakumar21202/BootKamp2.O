@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -40,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Initialize DB
         myref= FirebaseDatabase.getInstance().getReference("Student Info");
-        StorageReference storageReference=FirebaseStorage.getInstance().getReference("Images");
+
 
         myref.addValueEventListener(new ValueEventListener() {
             @Override
@@ -48,11 +51,35 @@ public class MainActivity extends AppCompatActivity {
                 for(DataSnapshot dataSnapshot : snapshot.getChildren()){
                     studentInfoModel =dataSnapshot.getValue(StudentInfoModel.class);
                     StudentData.add(studentInfoModel);
+                    // Image Fetching
+                    assert studentInfoModel != null;
+
+                    String ImgPath=studentInfoModel.getID();
+                    Toast.makeText(getApplicationContext(),"Id is"+studentInfoModel.getID(),Toast.LENGTH_SHORT).show();
+                    StorageReference storageReference=FirebaseStorage.getInstance().getReference(ImgPath);
+
+                    storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                        @Override
+                        public void onSuccess(Uri uri) {
+                            studentInfoModel.setImages(uri.toString());
+                            StudentData.add(studentInfoModel);
+
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(getApplicationContext(),"Error to Fetch Image",Toast.LENGTH_SHORT).show();
+
+
+                        }
+                    });
+
 
                 }
                 recyclerAdapter.notifyDataSetChanged();
 
             }
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
