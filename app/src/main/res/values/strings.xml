@@ -22,4 +22,5 @@
     <string name="welcome_to_cse">Welcome TO CSE</string>
     <string name="login">Login</string>
     <string name="welcome_to_iiit">Welcome To IIIT</string>
+    <string name="fill_your_detail">Fill Your Detail</string>
 </resources>
