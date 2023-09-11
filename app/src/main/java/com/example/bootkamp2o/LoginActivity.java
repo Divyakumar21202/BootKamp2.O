@@ -68,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
                                     int int2 = Integer.parseInt(Retrieve_password);
 
                                     if (int1 == int2) {
-                                        Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+                                        Intent intent=new Intent(getApplicationContext(),HomeFragmentActivity.class);
                                         startActivity(intent);
                                         finish();
 

@@ -8,6 +8,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -43,6 +45,14 @@ public class StudentInfoRecyclerAdapter extends RecyclerView.Adapter<StudentInfo
                 .circleCrop()
                 .error(R.drawable.img_2)
                 .into(holder.imageView);
+        holder.imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppCompatActivity appCompatActivity=(AppCompatActivity)v.getContext();
+                appCompatActivity.getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.viewPager,new StudentDataShowFragment(studentInfoModel.getID(), studentInfoModel.getImages(), studentInfoModel.getNAME(),studentInfoModel.getABOUT())).addToBackStack(null).commit();
+            }
+        });
 
     }
 

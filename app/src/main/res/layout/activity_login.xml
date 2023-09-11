@@ -25,47 +25,45 @@
             android:textSize="30sp"/>
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="10dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
         app:cardElevation="90dp"
         app:cardBackgroundColor="#020C57"
         android:layout_marginTop="150dp"
         >
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical">
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/enter_id"
                 android:textSize="25sp"
                 android:textColor="@color/white"
                 android:textStyle="bold"
+                android:layout_margin="4dp"
                 android:gravity="center"
                 android:textColorHint="#FFFFFF"
                 android:id="@+id/edt_txt_Log_id"
                 android:autofillHints="username"
                 android:inputType="number" />
-            <EditText
-                android:layout_width="wrap_content"
+
+    </androidx.cardview.widget.CardView>
+        <EditText
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/Login_password"
                 android:textSize="20sp"
                 android:textStyle="bold"
+            android:layout_marginStart="30dp"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
+            android:layout_marginEnd="30dp"
                 android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:autofillHints="password"
                 android:inputType="numberPassword"
                 android:id="@+id/edt_txt_Log_password"/>
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -156,7 +156,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                             }
                         });
-                Intent LoginIntent=new Intent(getApplicationContext(),MainActivity.class);
+                Intent LoginIntent=new Intent(getApplicationContext(),HomeFragmentActivity.class);
                 startActivity(LoginIntent);
                 finish();
             }
