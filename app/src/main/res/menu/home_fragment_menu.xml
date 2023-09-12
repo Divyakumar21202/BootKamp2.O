@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/sign_out"
+          android:title="Log out"
+          android:icon="@drawable/baseline_logout_24"
+        />
+    <item android:icon="@drawable/baseline_account_circle_24"
+          android:title="profile"
+        android:id="@+id/profile"/>
+    <item android:id="@+id/rate"
+        android:title="Rate Us"
+        android:icon="@drawable/baseline_star_rate_24"/>
+
+</menu>

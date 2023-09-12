@@ -57,6 +57,7 @@ public class SecondYearFragment extends Fragment {
                 recyclerView.setAdapter(recyclerAdapter);
 
                 myref = FirebaseDatabase.getInstance().getReference("Student Info");
+                myref.keepSynced(true);
 
                 myref.addValueEventListener(new ValueEventListener() {
                     @Override
@@ -68,7 +69,6 @@ public class SecondYearFragment extends Fragment {
                             assert studentInfoModel != null;
 
                             String ImgPath = studentInfoModel.getID();
-                            Toast.makeText(getContext(), "Id is" + studentInfoModel.getID(), Toast.LENGTH_SHORT).show();
                             StorageReference storageReference = FirebaseStorage.getInstance().getReference(ImgPath);
 
                             storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
@@ -81,7 +81,6 @@ public class SecondYearFragment extends Fragment {
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
                                 public void onFailure(@NonNull Exception e) {
-                                    Toast.makeText(getContext(), "Error to Fetch Image", Toast.LENGTH_SHORT).show();
 
 
                                 }
